@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main">
+  <mat-toolbar color="primary">
+      <span class="button-wrapper">
+          <a [href]="geoData" [download]="dataName" target="_blank">
+            <button mat-raised-button [disabled]="dataName === undefined" color="primary">Download</button>
+          </a>
+          <button mat-raised-button color="primary" (click)="onInfoClick()">Info</button>
+        </span>  
+      <mat-select [disabled]="dateList.length === 0" placeholder="Date" 
+        (selectionChange)="onDateChange($event)" [(ngModel)]="currDate">
+        <mat-option *ngFor="let date of dateList"
+          [value]="date">{{ date.toDateString() }}</mat-option>
+      </mat-select>
+      <mat-select (selectionChange)="onModeChange($event)" 
+        [(ngModel)]="mode"
+        placeholder="Mode">
+        <mat-option value="cow">COW (Correlates of War)</mat-option>
+        <mat-option value="gw">GW (Gleditsch and Ward)</mat-option>
+      </mat-select>
+      <span class="country-name">
+        {{ countryName }}
+      </span>
+  </mat-toolbar>
+  <div id="map" class="map"></div>
+  <mat-spinner *ngIf="loading"></mat-spinner>
+</div>

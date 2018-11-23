@@ -1,0 +1,47 @@
+
+<h3 mat-dialog-title>
+  <h1>Information</h1>
+</h3>
+
+<mat-dialog-content>
+  <h2>Introduction</h2>
+  <p>
+    This Web-Application aims to facilitate the access to the cshapes
+    dataset. For information on the dataset refer to 
+    <a href="http://nils.weidmann.ws/projects/cshapes" target="_blank">the website</a> and 
+    <a href="https://www.tandfonline.com/doi/abs/10.1080/03050620903554614" target="_blank">
+      this article
+    </a>. Note that only 
+    sovereign states are included, and the dataset is mainly targeted at 
+    high resolution maps. 
+  </p>
+
+  <h2>Usage</h2>
+  <p>
+    You can select either the Correlates of War (COW) or 
+    the Gledditsch and Ward (GW) reference dates. By changing 
+    the date you will instantly see the resulting geojson 
+    file displayed on the map. Use the <em>download</em>-Button 
+    to save the file to your computer. 
+  </p>
+
+  <h2>Notes</h2>
+  <p>
+    If you are looking to extract multiple snapshots from the 
+    cshapes dataset via command line, you may consider 
+    the python-based <a href="https://github.com/OSHistory/cshapes-converter" target="_blank">cshapes-converter</a>
+  </p>
+  <p>
+    Current cshapes Version: {{ cShapesVersion }}
+  </p>
+  <p>
+    Source Code on  
+    <a [href]="repoLink" target="_blank">GitHub</a>
+  </p>
+  <p>
+    Built with 
+    <a href="https://angular.io" target="_blank">Angular</a> and
+    <a href="https://openlayers.org" target="_blank">OpenLayers</a>
+    
+  </p>
+</mat-dialog-content>

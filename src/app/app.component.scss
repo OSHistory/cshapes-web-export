@@ -1,0 +1,28 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+}
+
+.map {
+    height: calc(100vh - 64px);
+    width: 100%;
+}
+
+.country-name {
+    width: 100%;
+    text-align: right;
+}
+
+.button-wrapper {
+    margin-right: 20px;
+}
+
+mat-select {
+    max-width: 300px;
+}
+
+mat-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
