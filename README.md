@@ -1,3 +1,7 @@
+# DEPRECATED 
+
+**Functionality provided by cshapes maintainers at https://cshapes.ethz.ch/**
+
 # README 
 
 This project generates snapshots from the GIS-Data provided 
